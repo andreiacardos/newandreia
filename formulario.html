@@ -1,31 +1,72 @@
 <!DOCTYPE html>
-<html lang="Pt=BR">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initia"
-   <link rel="stylesheet" href="estlilos.css"
 
+<html lang="Pt=BR">
+
+<head>
+
+ 
+   <meta charset="UTF-8">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <meta name="viewport" content="width=device-width, initia">
+   <link rel="stylesheet" href="estilos.css">
    <title>Teste1</title>
+ 
+<style>
+   input[type="submit"]{
+      border:none;
+      border-radius: 30px;
+      padding: 15px 30px;
+      outline: none;
+      background-color: chocolate;
+      color: azure; 
+      font-size: 15px;
+      box-shadow: 0px 7px darkslategray;
+      cursor: pointer;
+   }
+
+   input[type="submit"]:hover{
+     background-color: coral;
+   }
+
+   input[type="submit"]:active{
+     background-color: coral;
+     box-shadow: 0 7px darkslategray;
+     transform: translateY(4px);
+
+   }
+</style>
 
 </head>
+
 <body>
+
      <h1>Acesse sua conta</h1>
+
      <form action="">
+
      <ul>
          <li>
             <label for="nome">Nome do usuário:</label>
             <input type="text>" id="nome" name="nomeUsuario"><br> 
          </li>
          <li>
-            <label for="nome">Senha:</label>
-            <input type="password" id="senhal" name="senhaUsuario"><br>
+            <label for="nome">E-mail:</label>
+            <input type="password" id="email" name="emailUsuario">
          </li>
      </ul>
-      
-       <input type="submit" value="Logar">
-
+      <li>
+        <label for="mensagem">:</label>
+        <input type="text>" id="mensagem" name="mensagemUsuario">
+     </li>
      
+      <input type="submit" value="Enviar mensagem">
+   
+     
+
    </form>
+
 </body>
+
 </html>
