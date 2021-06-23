@@ -2,69 +2,111 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
+
     <style>
-        ul{
-            list-style-type:none;
-            margin: 0;
+        * {
+            margin:0;
             padding: 0;
-            overflow: hidden;
-            background-color: lightcoral;
-            position: fixed;
-            top: 0;
+        }
+        body {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 100%;
+        }
+        #navegacao-principal {
+            position: relative;
+            font-family: monospace;
+            float:left;
             width: 100%;
         }
-       
-       li{
-           float: left;
-       }
-        
-        li a{
-            display: block;
-            color: darkslategray;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
+        #menu-principal{
+            list-style:none;
+            padding-letf: 0;
         }
-
-        li a:hover{
-            color: lightpink;
-            background-color: palevioletred;
-        }
-        article{
-           padding: 16px;
-           margin-top: 30px;
-           height: 1500px;
-        }
-
-        .arctive{
+        #menu-principal li{
             background-color: rosybrown;
+            display: block;
+            float:left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s; 
         }
+        #menu-principal li a{
+            color:beige;
+            text-decoration:none;
+        }
+        .dropdown{
+             visibility: hidden;
+             opacity: 0;
+             min-width: 5rem;
+             position: absolute;
+             transition: all 0.5s ease;
+             margin-top: 1rem;
+             left: 0;
+             display: none;
+             box-shadow: 0px 8px 16px 0px blanchedalmond;
+        }
+        .dropdown{
+            clear: both;
+            width: 100%;
+        }
+        #menu-principal li: hover,
+        ul li:focus-within{
+           background-color:red;
+           cursor: pointer;
+           font-weight:bold;
+           transition:0.3s;  
+            
+        }
+        #menu-princilpal li a:hover{
+            color: lightpink;
+        }
+
+        #menu-principal li:hover>ul,
+        #menu-principal li:focus-within>ul,
+        .dropdown ul:hover,
+        .dropdown ul:focus{
+            visibility: visible;
+            opacity:1;
+            display: block;
+        }
+
+       
     </style>
 </head>
 <body>
      
-<nav>
-     <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#text1">Meus Projetos</a></li>
-         <li><a href="#text2">Meu Currículo</a></li>
-         <li><a href="#text3">Entre em Contato</a></li>
-    </ul>
+<nav id="navegacao-principal">
+    <ul id="menu-principal">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre mim</a>
+     <ul class="dropdown">
+         <li><a href="#">Meus Projetos</a></li>
+         <li><a href="#">Meu Currículo</a></li>
+         <li><a href="#">Meus Hobbies</a></li>
+    </ul></li>
+        <li><a href="#">Entre em contato</a></li>
+    </ul class="dropdown">
      </nav>
      <article>
-            <h1>Meus Projetos<a name="text1"></a></h1>
-            <p>Tendo como projeto principal terminar o curso de SPI, para futura profissão e me tornar uma excelente programadora.</p>
-            <p>Cursar inglês</p>
-            <p> Conhecer lugares desenvolvidos tecnológicamente.</p>
+  
+        <h1>Meus Projetos</h1>
+        <p>Tendo como projeto principal terminar o curso de SPI, para futura profissão e me tornar uma excelente programadora.</p>
+        <p>Cursar inglês</p>
+        <p>Conhecer lugares desenvolvidos tecnológicamente.</p>
+         
+        </article>    
+            <h2>Currículo</h2>
+            <p>Cursando Sistemas para Internet, 2° período.</p>
+            
+            <h3>Hobbies</h3>
+            <p>Ler</p>
+            <p>Assistir séries</p>
 
-            <h2>Currículo<a name="text2"></a></h2>
-            <p>Cursando Sistemas para Internet, 2° período.</a></p>
-
-            <h3>Contatos<a name="text3"></a></h3>
+            <h4>Contatos</h4>
             <p><a href=”tel:+5563992677252″>+55 (63) 99267–7252</a></p>
             <p><a href="mailto:andreia.nunes@estudante.ifto.edu.br">andreia.nunes@estudante.ifto.edu.br</a></p>
 
-            
              
      </article>
 
